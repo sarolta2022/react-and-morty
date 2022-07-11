@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-and-morty/static/css/main.0bf6b920.css",
+    "main.js": "/react-and-morty/static/js/main.33035732.js",
+    "static/media/image.png": "/react-and-morty/static/media/image.d5216adae59af2c8da7f.png",
+    "static/media/main.jpg": "/react-and-morty/static/media/main.af6c7e1cb79085194ebc.jpg",
+    "static/media/get_schwifty.ttf": "/react-and-morty/static/media/get_schwifty.c3d1dfc692e3547fed16.ttf",
+    "index.html": "/react-and-morty/index.html",
+    "main.0bf6b920.css.map": "/react-and-morty/static/css/main.0bf6b920.css.map",
+    "main.33035732.js.map": "/react-and-morty/static/js/main.33035732.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0bf6b920.css",
+    "static/js/main.33035732.js"
+  ]
+}
