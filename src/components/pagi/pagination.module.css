@@ -1,0 +1,32 @@
+.Pagination {
+  max-width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Pagination button {
+  font-size: 1.2rem;
+  border: none;
+  padding: 0.5rem;
+  background-color: #1b0872;
+  color: #fff;
+  cursor: pointer;
+  transition: 200ms;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.75);
+}
+
+.Pagination button:hover {
+  background-color: #2100b4;
+}
+
+.Pagination button:active {
+  background-color: #100055;
+}
+
+.Pagination button:disabled {
+  background-color: #362291;
+  color: #aaa;
+  cursor: default;
+}

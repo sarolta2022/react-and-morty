@@ -1,0 +1,209 @@
+@font-face {
+  font-family: myFont;
+  src: url(get_schwifty.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #5eeb00;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main h1 {
+  text-align: center;
+  font-family: myFont;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  color: rgb(32, 10, 131);
+  position: relative;
+}
+
+.main h1::before,
+.main h1::after {
+  width: 100%;
+  content: "Rick And Morty";
+  text-align: center;
+  font-family: myFont;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  color: red;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: -1;
+  animation: glitch1 8s ease-in-out infinite;
+}
+
+.main h1::after {
+  color: blue;
+  z-index: -1;
+  animation: glitch2 8s ease-in-out infinite;
+}
+
+.grid {
+  padding: 1rem 4rem;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-areas:
+    "charBtn img locText"
+    "charText img locText"
+    "charText empty locBtn";
+}
+
+.main img {
+  width: 10rem;
+  height: auto;
+  border-radius: 5px;
+  width: 100%;
+  grid-area: img;
+  object-fit: cover;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transform: scale(0);
+  opacity: 0;
+  animation: scaleIn 500ms ease-in forwards;
+}
+
+.location-btn,
+.character-btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: myFont;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: #5eeb00;
+  text-shadow: 0 0 5px #00c3ff, 0 0 5px #00c3ff;
+  background-color: rgb(32, 10, 131);
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 300ms;
+  cursor: pointer;
+  transform: scale(0);
+  opacity: 0;
+  animation: scaleIn 500ms ease-in forwards;
+}
+
+.character-btn:hover,
+.location-btn:hover {
+  color: rgb(32, 10, 131);
+  background-color: #5eeb00;
+  font-weight: 800;
+}
+
+.character-btn {
+  grid-area: charBtn;
+  animation-delay: 200ms;
+}
+
+.character-text {
+  grid-area: charText;
+  animation-delay: 400ms;
+}
+
+.location-btn {
+  grid-area: locBtn;
+  animation-delay: 400ms;
+}
+
+.location-text {
+  grid-area: locText;
+}
+
+.character-text,
+.location-text {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  font-family: myFont;
+  padding: 1rem;
+  letter-spacing: 0.2rem;
+  transform: scale(0);
+  opacity: 0;
+  animation: scaleIn 500ms ease-in forwards;
+}
+
+@media (max-width: 767px) {
+  .grid {
+    gap: 2rem;
+    grid-template-areas:
+      "img"
+      "charBtn"
+      "charText"
+      "locBtn"
+      "locText";
+  }
+}
+
+@keyframes glitch1 {
+  0% {
+    top: 0;
+    left: 50%;
+  }
+  1.5% {
+    top: 4px;
+    left: calc(50% + 2px);
+  }
+  3% {
+    top: -5px;
+    left: calc(50% + 4px);
+  }
+  4.5% {
+    top: 3px;
+    left: calc(50% - 5px);
+  }
+  6% {
+    top: -3px;
+    left: calc(50% + 3px);
+  }
+  7.5% {
+    top: 0;
+    left: 50%;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    top: 0;
+    left: 50%;
+  }
+  1.5% {
+    top: -3px;
+    left: calc(50% + 3px);
+  }
+  3% {
+    top: -3px;
+    left: calc(50% + 6px);
+  }
+  4.5% {
+    top: 4px;
+    left: calc(50% + 3px);
+  }
+  6% {
+    top: -2px;
+    left: calc(50% + 4px);
+  }
+  7.5% {
+    top: 0;
+    left: 50%;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
